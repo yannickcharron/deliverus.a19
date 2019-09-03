@@ -1,0 +1,11 @@
+{
+    "env":"default",
+    "api":{
+        "name":"Deliverus",
+        "version":"1.0.0",
+        "port":4500
+    },
+    "dbConfig": {
+        "url":"mongodb+srv://uDeliverus:A123456@developpement-bxqek.azure.mongodb.net/deliverus?authSource=deliverus"
+    }
+}

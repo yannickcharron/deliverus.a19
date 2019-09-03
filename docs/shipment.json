@@ -1,0 +1,23 @@
+{
+	"service": "Express",
+	"customsReference": "Aucune",
+	"description": "Colis Description",
+	"origin": {
+		"name": "Yannick Charron",
+		"address": "455 rue Fournier",
+		"zip": "J7Z4V5",
+		"city":"Saint-Jérôme",
+		"state": "Québec",
+		"country": "Canada",
+		"serviceArea": "Eastern Québec"
+	},
+	"destination": {
+		"name": "Robert Turenne",
+		"address": "123 rue Principal",
+		"zip": "J7H2V7",
+		"city":"Oka",
+		"state": "Québec",
+		"country": "Canada",
+		"serviceArea": "Eastern Québec"
+	}
+}
