@@ -2,10 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const shipmentSchema = new Schema({
-    _id: Schema.Types.ObjectId,
+	_id: Schema.Types.ObjectId,
+	tracking: {
+		type:String,
+		unique:true
+	},
     service: String,
     customsReference: String,
-    description: String,
+	description: String,
+	shipDate: Date,
+	estimatedDeliveryDate: Date,
     origin: {
 		name: String,
 		address: String,
