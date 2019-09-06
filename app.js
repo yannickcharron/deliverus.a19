@@ -2,6 +2,7 @@ const cors = require('cors');
 const chalk = require('chalk');
 const config = require('config');
 const express = require('express');
+const lib = require('./lib');
 
 const app = express();
 
@@ -20,6 +21,8 @@ const routes = require('./routes');
 
 app.use('/demo', routes.demo);
 app.use('/shipments', routes.shipments);
+
+lib.errors(app);
 
 const PORT = config.api.port || 4500;
 app.listen(PORT, () => console.log(chalk.rgb(127,255,0)('Mon serveur est en fonction')));

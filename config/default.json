@@ -3,6 +3,7 @@
     "api":{
         "name":"Deliverus",
         "version":"1.0.0",
+        "baseUrl":"http://localhost:4500",
         "port":4500
     },
     "dbConfig": {
