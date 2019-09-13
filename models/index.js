@@ -1,1 +1,2 @@
 require('./shipment');
+require('./package');

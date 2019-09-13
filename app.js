@@ -6,6 +6,7 @@ const lib = require('./lib');
 
 const app = express();
 
+lib.logger(app);
 
 app.use(cors()); // Activation des cross-origin requests
 app.use(express.json()); // Communication en JSON avec le client
