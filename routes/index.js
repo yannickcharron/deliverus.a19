@@ -1,4 +1,5 @@
 module.exports = {
     demo: require('./demo'),
-    shipments:require('./shipments')
+    shipments:require('./shipments'),
+    accounts:require('./accounts')
 }
