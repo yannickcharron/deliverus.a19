@@ -5,15 +5,34 @@ const moment = require('moment');
 const passport = require('passport');
 const mongoose =  require('mongoose');
 const createError = require('http-errors');
+const expressJwt = require('express-jwt');
 
 const router = express.Router();
 const Account = mongoose.model('Account');
 
+const authentificator = expressJwt({
+    secret:config.api.jwtSecret,
+    userProperty: 'account'
+});
+
+router.get('/', authentificator, async (req, res, next) => {
+
+    console.log(req.account);
+    if(!req.account._id) {
+        res.status(401).end();
+    } else {
+        let account = await Account.findById(req.account._id);
+        res.status(200).json(account);
+    }
+})
+
+
 router.post('/login', passport.authenticate('local'), async (req, res, next) => {
     
     if(req.user) {
-        console.log(req.user);
-        res.status(200).json(req.user);
+        res.status(200).json({
+            "token":req.user.generateJwt()
+        });
     }
 });
 
@@ -32,7 +51,7 @@ router.post('/', async (req, res, next) => {
     }
 });
 
-router.get('/', async (req, res, next) => {
+router.get('/bitcoin', async (req, res, next) => {
 
     const ac = {
         nom:'Yannick',

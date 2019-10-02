@@ -4,7 +4,8 @@
         "name":"Deliverus",
         "version":"1.0.0",
         "baseUrl":"http://localhost:4500",
-        "port":4500
+        "port":4500,
+        "jwtSecret":"vJwb1880FFneOSSZ"
     },
     "dbConfig": {
         "url":"mongodb+srv://uDeliverus:A123456@developpement-bxqek.azure.mongodb.net/deliverus?authSource=deliverus"
